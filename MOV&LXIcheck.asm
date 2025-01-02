@@ -1,0 +1,7 @@
+	   LXI H,0015
+	   MOV A,M
+	   LXI H,0017
+	   MOV M,A
+	   HLT
+#ORG 0015
+#DB 07

@@ -1,0 +1,6 @@
+MVI A,25
+
+LXI H,0015
+
+MOV M,A
+HLT

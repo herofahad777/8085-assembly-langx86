@@ -1,0 +1,12 @@
+	   LDA 0020
+	   STA 0022
+	   LXI H,ABCD
+	   LXI D,1234
+	   MOV A,M
+	   XCHG
+	   MOV M,A
+	   HLT
+# ORG 0020
+# DB 13
+# ORG ABCD
+# DB 06

@@ -1,0 +1,20 @@
+//Exchange the contents of two blocks
+# ORG C030
+# DB 07,05,02,08,AF
+#ORG D030
+#DB 0F,0A,F3,42,09
+# ORG 0000
+
+MVI C,05
+LXI H,C030
+LXI D,D030
+LOOP:LDAX D
+MOV B,M
+MOV M,A
+MOV A,B
+STAX D
+INX H
+INX D
+DCR C
+JNZ LOOP
+HLT

@@ -1,0 +1,20 @@
+// Find First occurrence of AB H data in a given block
+# ORG C030
+# DB 2F,FF,AC,AB,07
+# ORG C02F
+# DB 05
+# ORG 0000
+
+MVI B,00
+MVI A,AB
+LXI H,C02F
+MOV C,M
+LOOP:INX H
+CMP M
+JNZ NEXT
+INR B
+NEXT:DCR C
+JNZ LOOP
+INX H
+MOV M,B
+STOP:HLT

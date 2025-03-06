@@ -1,0 +1,15 @@
+//transfer data to reverse order
+# ORG C030
+# DB 07,05,02,08,AF
+# ORG 0000
+
+MVI C,05
+LXI H,C034
+LXI D,D030
+LOOP:MOV A,M
+STAX D
+DCX H
+INX D
+DCR C
+JNZ LOOP
+HLT

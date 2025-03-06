@@ -1,0 +1,17 @@
+//Count no of zero in a 8bit number
+# ORG C030
+# DB 07
+# ORG 0000
+
+MVI C,08
+MVI B,00
+LXI H,C030
+MOV A,M
+LOOP:RRC
+JC NEXT
+INR B
+NEXT:DCR C
+JNZ LOOP
+INX H
+MOV M,B
+HLT
